@@ -4,12 +4,12 @@
 
 namespace DataGenerator {
     /// <summary>
-    /// Возвращает случайный double
+    /// Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃР»СѓС‡Р°Р№РЅС‹Р№ double
     /// </summary>
     double GetRandomDouble();
 
     /// <summary>
-    /// Генерирует заданное количество чисел с плавающей запятой
+    /// Р“РµРЅРµСЂРёСЂСѓРµС‚ Р·Р°РґР°РЅРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ С‡РёСЃРµР» СЃ РїР»Р°РІР°СЋС‰РµР№ Р·Р°РїСЏС‚РѕР№
     /// </summary>
     template<typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
     std::vector<T> GenerateInputData(int numOfElements)

@@ -5,14 +5,14 @@
 #include "DataGenerator.h"
 
 /// <summary>
-/// Запускает тесты произовдительности и записывает в excel файл
+/// Р—Р°РїСѓСЃРєР°РµС‚ С‚РµСЃС‚С‹ РїСЂРѕРёР·РѕРІРґРёС‚РµР»СЊРЅРѕСЃС‚Рё Рё Р·Р°РїРёСЃС‹РІР°РµС‚ РІ excel С„Р°Р№Р»
 /// </summary>
 class SmaPerfomanceWriter
 {
 private:
     std::ofstream outData;
     /// <summary>
-    /// Замеряет выполнение функции GetSMA в секундах для 1000000 входных данных с заданной шириной окна
+    /// Р—Р°РјРµСЂСЏРµС‚ РІС‹РїРѕР»РЅРµРЅРёРµ С„СѓРЅРєС†РёРё GetSMA РІ СЃРµРєСѓРЅРґР°С… РґР»СЏ 1000000 РІС…РѕРґРЅС‹С… РґР°РЅРЅС‹С… СЃ Р·Р°РґР°РЅРЅРѕР№ С€РёСЂРёРЅРѕР№ РѕРєРЅР°
     /// </summary>
     template<typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
     float DoPerfomanceTest(int windowWidth)
@@ -25,7 +25,7 @@ private:
 public:
     SmaPerfomanceWriter(std::string fileName = "perfomance.csv");
     /// <summary>
-    /// Запускает и записывает тест произодительности sma для float и double для заданной ширины окна
+    /// Р—Р°РїСѓСЃРєР°РµС‚ Рё Р·Р°РїРёСЃС‹РІР°РµС‚ С‚РµСЃС‚ РїСЂРѕРёР·РѕРґРёС‚РµР»СЊРЅРѕСЃС‚Рё sma РґР»СЏ float Рё double РґР»СЏ Р·Р°РґР°РЅРЅРѕР№ С€РёСЂРёРЅС‹ РѕРєРЅР°
     /// </summary>
     void WritePerfomanceForDoubleAndFloat(int windowWidth);
     ~SmaPerfomanceWriter();

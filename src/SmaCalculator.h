@@ -3,7 +3,7 @@
 
 namespace SmaCalculator {
     /// <summary>
-    /// Считает скользящую среднюю
+    /// РЎС‡РёС‚Р°РµС‚ СЃРєРѕР»СЊР·СЏС‰СѓСЋ СЃСЂРµРґРЅСЋСЋ
     /// </summary>
     template<typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
     std::vector<T> GetSMA(std::vector<T>& inputData, int windowWidth)
