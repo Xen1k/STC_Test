@@ -4,9 +4,8 @@
 #include <algorithm>
 #include <ctime>
 
-
 /// <summary>
-/// Возвращает случайное число с плавающей запятой
+/// Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃР»СѓС‡Р°Р№РЅРѕРµ С‡РёСЃР»Рѕ СЃ РїР»Р°РІР°СЋС‰РµР№ Р·Р°РїСЏС‚РѕР№
 /// </summary>
 template<typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
 T GetRandomFloatingNumber()
@@ -17,7 +16,7 @@ T GetRandomFloatingNumber()
 }
 
 /// <summary>
-/// Генерирует заданное количество чисел с плавающей запятой
+/// Р“РµРЅРµСЂРёСЂСѓРµС‚ Р·Р°РґР°РЅРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ С‡РёСЃРµР» СЃ РїР»Р°РІР°СЋС‰РµР№ Р·Р°РїСЏС‚РѕР№
 /// </summary>
 template<typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
 std::vector<T> GenerateInputData(int numOfElements)
@@ -29,7 +28,7 @@ std::vector<T> GenerateInputData(int numOfElements)
 
 
 /// <summary>
-/// Считает скользящую среднюю
+/// РЎС‡РёС‚Р°РµС‚ СЃРєРѕР»СЊР·СЏС‰СѓСЋ СЃСЂРµРґРЅСЋСЋ
 /// </summary>
 template<typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
 std::vector<T> GetSMA(std::vector<T>& inputData, int windowWidth)
