@@ -10,9 +10,10 @@ int main()
     for (int i = 4; i <= 128; i *= 2)
     {
         std::cout << "Tesing " << i << " window size" << std::endl;
-        perfomanceWriter.WritePerfomanceForDoubleAndFloat(i);
+        perfomanceWriter.MeasurePerfomanceForDoubleAndFloat(i);
     }
-    std::cout << "Perfomace tests completed" << std::endl;
+    std::cout << "Perfomace tests completed. Output is in the excel file." << std::endl;
+    perfomanceWriter.PlotData();
     system("pause");
     return 0;
 }

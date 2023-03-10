@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 2.6)
 project (SRCTest) 
-file(GLOB SOURCES
-    src/*.h
-    src/*.cpp
-)
+file(GLOB SOURCES src/*.h src/*.cpp)
+add_subdirectory(src/SimpleXlsxWriter ${CMAKE_CURRENT_BINARY_DIR}/SimpleXlsxWriter)
 add_executable(SRCTest ${SOURCES})
+target_include_directories(SRCTest PUBLIC src/SimpleXlsxWriter)
+target_link_libraries(SRCTest PUBLIC SimpleXlsx)
